@@ -5,3 +5,11 @@ scripts/
 README.md
 AGENTS.md
 CLAUDE.md
+.env*
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+*service-account*.json
