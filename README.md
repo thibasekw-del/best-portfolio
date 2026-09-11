@@ -86,3 +86,15 @@ The page respects reduced-motion preferences and remains readable without JavaSc
 
 Fonts use Google Fonts (Inter and Noto Sans Thai), with local sans-serif fallbacks
 when the font service is unavailable.
+
+## GitHub and Vercel
+
+The dedicated repository is https://github.com/thibasekw-del/best-portfolio (private).
+The older thibasekw-del/Portfolio repository is a separate existing website.
+
+Vercel detects the Next.js framework and builds the static export using npm ci
+and npm run build. Local Vercel settings are ignored by Git. Deployment uploads
+exclude local artifacts and Sites metadata through .vercelignore.
+
+Push changes to the main branch to trigger production deployment once the
+GitHub integration is connected. Keep each change in a focused commit.

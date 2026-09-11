@@ -1,0 +1,7 @@
+artifacts/
+.openai/
+.sites-runtime/
+scripts/
+README.md
+AGENTS.md
+CLAUDE.md
