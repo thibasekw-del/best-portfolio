@@ -7,7 +7,7 @@ export function ProjectPreview({ project }: { project: Project }) {
         <img
           className="project-screenshot"
           src={project.screenshot}
-          alt={project.title + " screenshot"}
+          alt={project.imageAlt ?? project.title + " screenshot"}
           loading="lazy"
           width={800}
           height={450}

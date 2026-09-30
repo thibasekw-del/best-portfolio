@@ -4,9 +4,10 @@ export type Project = {
   category: string;
   description: string;
   technologies: string[];
-  preview: "clusters" | "dashboard" | "dormitory" | "next";
+  preview: "clusters" | "dashboard" | "dormitory" | "menu-mate" | "next";
   status: "placeholder" | "published";
   screenshot?: string;
+  imageAlt?: string;
   githubUrl?: string;
   liveUrl?: string;
   study: {
@@ -20,6 +21,38 @@ export type Project = {
 
 // Replace placeholder content, add evidence, and change status to publish real work.
 export const projects: Project[] = [
+  {
+    slug: "menu-mate",
+    title: "Menu Mate — วันนี้กินอะไรดี?",
+    category: "AI Application",
+    description:
+      "A Thai meal recommendation app for cravings or ingredients already on hand.",
+    technologies: [
+      "Python",
+      "Streamlit",
+      "Gemini API",
+      "TheMealDB",
+      "Firebase",
+    ],
+    preview: "menu-mate",
+    status: "published",
+    screenshot: "/projects/menu-mate.webp",
+    imageAlt: "Food hero artwork used in the Menu Mate app",
+    githubUrl: "https://github.com/thibasekw-del/food-project",
+    study: {
+      problem:
+        "Deciding what to eat can be difficult when someone has a craving but no dish in mind, or has ingredients but no recipe idea. Menu Mate offers a Thai-language flow for each situation.",
+      dataset:
+        "The app takes the user's food preferences or available ingredients and retrieves recipe candidates from TheMealDB. Gemini can also propose suggestions, which the interface labels separately from database recipes.",
+      methods:
+        "Built with Streamlit and Python. Gemini interprets the Thai request, TheMealDB supplies matching recipes, and Gemini returns structured recommendations. Firebase Authentication and Firestore support accounts, saved favorites, and recommendation history. The app validates response fields and source IDs before displaying results.",
+      results:
+        "Implemented both recommendation modes, account sign-in, favorites, and history. Recommendations are limited to three dishes per request. The project's 15 automated tests pass with external services mocked; live service availability depends on configured API credentials.",
+      takeaways:
+        "The main engineering challenges were grounding AI suggestions in recipe data, keeping generated suggestions clearly labelled, handling service failures, and limiting saved data to each signed-in user.",
+    },
+  },
+
   {
     slug: "customer-segmentation",
     title: "Customer Segmentation",

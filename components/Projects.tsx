@@ -17,9 +17,9 @@ export function Projects() {
             coming together<span className="sage">.</span>
           </h2>
           <p>
-            Project cards are ready.
+            Explore a completed project
             <br />
-            Replace these placeholders with real projects.
+            alongside ideas in progress.
           </p>
         </div>
         <div className="projects-grid">
